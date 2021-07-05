@@ -12,59 +12,33 @@
     <div class="pop-container">
         <div id="myDIV" class="pop-header">
           <h2 style="margin:5px">Shopping List</h2>
-          <div class="addItem-324">
-          <input type="text" id="myInput" class="it-324" placeholder="Type in item to add...">
-          <button class="addBtn-324">Add</button>
-          </div>
+          <!-- <form action=""> -->
+            <input type="text" id="myInput" class="it-324" placeholder="Type in item to add...">
+            <div class="addQty-324">
+              <div class="qtyWrapper-324">
+                <label for="itemQty">Qty.&nbsp;</label>
+                <!-- <div class="qtyWrapper-324"> -->
+                  <button class="minus-btn"> – </button>
+                  <input type="text" class="qty-324" value="1" name="itemQty">
+                  <!-- <input type="number" step="1" min="1" max="" name="itemQty" value="1" title="Qty" class="qty-324" size="4" pattern="" inputmode=""> -->
+                  <button class="plus-btn"> + </button>
+                <!-- </div> -->
+                
+              </div>
+              <button class="addBtn-324">Add</button>
+            </div>
+          <!-- </form> -->
         </div>
         
         <ol id="myUL" class="olist-324">
-          <li>Hit the gym
-            <div class="_3dY_ZR">
-              <button class="minus-btn"> – </button>
-              <input type="text" class="qty-324" value="1">
-              <button class="plus-btn"> + </button>
-            </div>    
-          </li>
-          <li class="checked">Pay bills
-              <div class="_3dY_ZR">
-              <button class="minus-btn"> – </button>
-              <input type="text" class="qty-324" value="1">
-              <button class="plus-btn"> + </button>
-            </div>
-          </li>
-          <li>Meet George
-            <div class="_3dY_ZR">
-              <button class="minus-btn"> – </button>
-              <input type="text" class="qty-324" value="1">
-              <button class="plus-btn"> + </button>
-            </div>  
-          </li>
-          <li>Buy eggs
-            <div class="_3dY_ZR">
-              <button class="minus-btn"> – </button>
-              <input type="text" class="qty-324" value="1">
-              <button class="plus-btn"> + </button>
-            </div>  
-          </li>
-          <li>Read a book
-            <div class="_3dY_ZR">
-              <button class="minus-btn"> – </button>
-              <input type="text" class="qty-324" value="1">
-              <button class="plus-btn"> + </button>
-            </div>  
-          </li>
-          <li>Organize office
-            <div class="_3dY_ZR">
-              <button class="minus-btn"> – </button>
-              <input type="text" class="qty-324" value="1">
-              <button class="plus-btn"> + </button>
-            </div>  
-          </li>
+          <li>Pay bills</li>
+          <li>Meet George</li>
+          <li>Buy eggs</li>
+          <li>Read a book</li>
         </ol>
           
     </div>
-    <script src="main.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
  

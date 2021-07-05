@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     // Create a "close" button and append it to each list item
-    var myNodelist = document.getElementsByClassName("_3dY_ZR");
+    var myNodelist = document.getElementsByTagName("LI");
     var i;
     for (i = 0; i < myNodelist.length; i++) {
         var span = document.createElement("BUTTON");
@@ -34,14 +34,20 @@ $(document).ready(function () {
             document.getElementById("myUL").appendChild(li);
         }
         document.getElementById("myInput").value = "";
-    
-        var span = document.createElement("DIV");
-        // var txt = document.createTextNode("\u00D7");
-        // var txt1 = '<button class="minus-btn"> – </button><input type="text" class="qty-324" value="1"><button class="plus-btn"> + </button><button class="close-324">×</button>';
-        span.className = "_3dY_ZR";
-        // span.appendChild(txt1);
-        $('._3dY_ZR').appendChild('<button class="minus-btn"> – </button><input type="text" class="qty-324" value="1"><button class="plus-btn"> + </button><button class="close-324">×</button>');
+        // var qtyVal = document.getElementsByClassName("qty-324").value;
+        var qtyVal = $('.qty-324').val();
+        var qtyValue = " (" + qtyVal + ")";
+        console.log("qtyVal: "+qtyVal + "qtyValue: "+qtyValue);
+        var span = document.createElement("SPAN");
+        var txt1 = document.createTextNode(qtyValue);
+        span.className = "disQty-324";
+        span.appendChild(txt1);
+        var btn = document.createElement("BUTTON");
+        var txt2 = document.createTextNode("\u00D7");
+        btn.className = "close-324";
+        btn.appendChild(txt2);
         li.appendChild(span);
+        li.appendChild(btn);
     
         for (i = 0; i < close.length; i++) {
             close[i].onclick = function() {
@@ -49,30 +55,28 @@ $(document).ready(function () {
                 div.style.display = "none";
             }
         }
+        $('.qty-324').val(1);
     });
 
     // $('.minus-btn').prop('disabled',true);
     $('.minus-btn').on('click', function(e) {
         e.preventDefault();
         var $this = $(this);
-        var $input = $this.closest('div').find('input');
+        var $input = $('.qty-324');
         var value = parseInt($input.val());
     
         if (value > 1) {
             value = value - 1;
         } else {
             value = 1;
-            // $this.prop('disabled',true);
         }
-    
-    $input.val(value);
-    
+        $input.val(value);
     });
     
     $('.plus-btn').on('click', function(e) {
         e.preventDefault();
         var $this = $(this);
-        var $input = $this.closest('div').find('input');
+        var $input = $('.qty-324');
         var value = parseInt($input.val());
     
         if (value < 5) {
@@ -81,7 +85,6 @@ $(document).ready(function () {
         } else {
             value =5;
         }
-    
         $input.val(value);
     });
 
