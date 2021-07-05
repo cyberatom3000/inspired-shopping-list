@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+
+        <header>
+          Simple grocery list
+        </header>
+      
+        <main>
+      
+          <form>
+            <label for="item-input">Item</label>
+            <input type="text" id="item-input">
+            <label for="quantity-input">Quantity</label>
+            <input type="number" id="quantity-input">
+            <button type="submit" id="submit-btn">Add</button>
+          </form>
+      
+          <div id="lists">
+            <p class="list__label">Still need to grab <span class="quantity" id="shopping-num"></span></p>
+            <ul id="shopping-list">
+            </ul>
+            <p class="list__label">In cart <span class="quantity" id="bought-num"></span></p>
+            <ul id="bought-list">
+            </ul>
+          </div>
+      
+        </main>
+        <div class="push"></div>
+    </div>
+      
+    <footer>
+        <a href="https://twitter.com/kearieggers" target="_blank">@kearieggers</a>
+    </footer>
+    <script src="main2.js"></script>
+</body>
+</html>
+ 

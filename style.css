@@ -1,0 +1,61 @@
+.pop-container {
+/*   display: block; */
+    padding: 10%;
+}
+.addItem-324 {
+  display: flex;
+  /* border: 1px solid black; */
+  /* border-radius: 5px; */
+  height: 30px;
+/*   jusitfy-contents:center; */
+/*   align-items:center; */
+}
+.it-324 {
+    border: none;
+    border-bottom: 1px solid #dfdfdf;
+    width: 100%;
+}
+.addBtn-324 {
+    font-size: 12px;
+    text-transform: uppercase;
+    border: 1px solid #b7b2b2;
+    border-radius: 5px;
+    padding: 6px 16px;
+}
+.add-Btn-324:hover {
+    border-color: #68b843;
+    background: #68b843;
+    color: white !important;
+}
+ol.olist-324 {
+    /* padding-left: 0px; */
+}
+ol.olist-324 li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+._3dY_ZR {
+    display: flex;
+}
+.qty-324 {
+    width: 24px;
+    text-align: center;
+}
+/* Style the close button */
+.close-324 {
+    margin-left: 12px;
+    padding: 0px 6px;
+    border: none;
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+.close-324:hover {
+    /* background-color: #f44336; */
+    color: white;
+    font-weight: 700;
+    color: #f44336;
+    cursor: pointer;
+}
